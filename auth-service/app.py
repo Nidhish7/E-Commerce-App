@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home():
     return jsonify({"message": "Auth Service is running"})
 
+@app.route('/auth/')
+def auth_root():
+    return jsonify({"message": "Auth Service is running"})
+
 @app.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
